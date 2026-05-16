@@ -9,12 +9,12 @@ form.addEventListener('submit', event => {
   if (userEmail === '' || userPassword === '') {
     alert('All form fields must be filled in');
 
-    // return;
+    return;
   }
 
   const data = {
-    Email: userEmail,
-    Password: userPassword,
+    email: userEmail,
+    password: userPassword,
   };
 
   console.log(data);

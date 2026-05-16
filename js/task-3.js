@@ -5,7 +5,7 @@ input.addEventListener('input', event => {
   const inputValue = event.currentTarget.value.trim();
 
   if (inputValue === '') {
-    span.textContent = 'Anonymus';
+    span.textContent = 'Anonymous';
   } else {
     span.textContent = inputValue;
   }
