@@ -1,14 +1,12 @@
-function filterArray(numbers, value) {
-  const arrayNumbers = [];
-  for (const num of numbers) {
-    if (num > value) {
-      arrayNumbers.push(num);
-    }
+const input = document.querySelector('#name-input');
+const span = document.querySelector('#name-output');
+
+input.addEventListener('input', event => {
+  const inputValue = event.currentTarget.value.trim();
+
+  if (inputValue === '') {
+    span.textContent = 'Anonymus';
+  } else {
+    span.textContent = inputValue;
   }
-  return arrayNumbers;
-}
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+});
